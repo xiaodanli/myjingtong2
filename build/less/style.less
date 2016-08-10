@@ -253,6 +253,9 @@ img{
     &.weui_panel{
         margin:1.17647059em 15px .3em;
     }
+    .weui_media_box .weui_media_title,.weui_cells,.weui_cells_checkbox .weui_icon_checked:before{
+        font-size:14px;
+    }
 }
 .qus-btn{
     padding:1.17647059em 15px .3em;
@@ -285,7 +288,6 @@ img{
     padding-top:.6em;
     padding-left: 15px;
     padding-right: 15px;
-    color: #888;
     font-size: 14px;
 }
 .bid-pad:before,.bid-time:before{
@@ -397,7 +399,6 @@ img{
     width:100%;
     display:block;
     padding-right:15px;
-    color:#888;
 }
 .mgt{
     margin-top:1.17647059em;
@@ -406,10 +407,9 @@ img{
     margin:1.17647059em 15px .3em;
 }
 .detail-time{
-    color:#888;
     font-size:14px;
     text-align:right;
-    padding:0 15px 10px 15px;
+    padding:0 30px 10px 15px;
 }
 .detail-company{
     padding:15px 15px 0 15px;
@@ -501,6 +501,10 @@ img{
     &.step3:before{
         content:"竞标中";
         background-image: url(../imgs/state-bg2.png);
+    }
+    &.step4:before{
+        content:"验收中";
+        background-image: url(../imgs/state-bg.png);
     }
 }
 //订单详情
@@ -625,4 +629,122 @@ img{
 .recom.weui_cells {
     font-size:14px;
     text-align:center;
+}
+//销售员
+.sale{
+    padding:10px 15px;
+}
+.kong30{
+    height:30px;
+}
+//选择
+.choose-wrap,.choose-items{
+    margin:10px 15px;
+    background-color:#fff;
+}
+.weui_select_after.choose{
+    font-size:14px;
+}
+.choose-item{
+    .item-l{
+        width:100px;
+        height:40px;
+        text-align:center;
+        border:1px solid #d9d9d9;
+        .r;
+        input{
+            .a;
+            left:-6px;
+            top:12px;
+        }
+    }
+    .item-price{
+        -webkit-box-flex:1;
+        box-flex:1;
+        text-align:right;
+    }
+    display:-webkit-box;
+    display:box;
+    line-height:40px;
+    height:70px;
+    padding:20px;
+}
+.items-wrap{
+    border-bottom:1px solid #d9d9d9;
+    &:last-child{
+        border-bottom:none;
+    }
+}
+.choose-txt{
+    font-size:14px;
+    margin:10px 15px;
+    line-height:1.4;
+    padding-bottom:14px;
+}
+.gif{
+    width:30px;
+    height:30px;
+    margin:30px auto 0 auto;
+}
+//施工
+.constrution{
+    .order-con{
+        margin-bottom:0;
+    }
+}
+.comment{
+    padding:0 10px;
+    background-color:#f69c00;
+    border-radius:5px;
+    position: absolute;
+    right: 20px;
+    bottom:20px;
+    color:#fff;
+}
+.deposit{
+    width:90%;
+    .block;
+    padding:6px 0;
+    background-color:#f69c00;
+    border-radius:5px;
+    margin:20px auto;
+    text-align:center;
+    color:#fff;
+}
+
+//评价星星
+.well{
+    line-height:44px;
+}
+.rating {
+    color: #a9a9a9;
+    margin: 0;
+    padding: 0;
+    font-size:26px;
+}
+ul.rating {
+    display:block;
+    width: 210px;
+    margin-left: 88px;
+}
+
+.rating li {
+    list-style-type: none;
+    display: inline-block;
+    padding: 1px;
+    text-align: center;
+    font-weight: bold;
+    cursor: pointer;
+    margin-right:10px;
+}
+.rating .filled {
+    color: #ffee33;
+}
+.well-txt{
+    font-size:14px;
+    float:left;
+    margin-left:20px;
+}
+.mg20{
+    margin:20px;
 }

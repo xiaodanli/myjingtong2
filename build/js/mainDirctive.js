@@ -1,3 +1,3 @@
- define(['directive/backButton'],function(){
+ define(['directive/star'],function(){
  		
  });

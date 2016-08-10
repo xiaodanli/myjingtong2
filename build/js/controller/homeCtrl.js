@@ -2,6 +2,9 @@ define(['../js/controller/module.js'],function(controllers){
     controllers.controller('homeCtrl',function($scope,$rootScope,$http){
         $rootScope.headTitle = $rootScope.title = "鲸通";
         $rootScope.isFoot = true;
+        $rootScope.home = true;
+        $rootScope.bid = false;
+        $rootScope.my = false;
         /*$http.get("http://192.168.0.148:1234/json/list.json")               // 获取相对地址的数据
         .success(function (response, status, headers, config) {    //成功时的处理
             $scope.lists = response;
