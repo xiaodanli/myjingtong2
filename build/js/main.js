@@ -3,12 +3,12 @@ require.config({
 		baseUrl:"./",
 		'angular': 'libs/angular.min',
         'angular-route': 'libs/angular-ui-router',
+        "angular-resource":"libs/angular-resource.min",
+        "swiper":"libs/swiper.min",
         'domReady': 'libs/domReady',
         /*一些库文件*/
 		"router":"router",
-		"app":"app",
-		"service":"service",
-		"angular-resource":"libs/angular-resource.min"
+		"app":"app"
 	},
 	shim:{
 		"angular":{
@@ -21,6 +21,9 @@ require.config({
 		"angular-resource":{
 			deps: ['angular'],
 			exports:"angular-resource"
+		},
+		"swiper":{
+			exports:"swiper"
 		}
 	},
 	deps:['bootstrap'],

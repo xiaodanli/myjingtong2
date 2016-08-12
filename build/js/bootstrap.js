@@ -2,10 +2,9 @@ define(['require',
         'angular',
         'angular-route',
         'router',
-        'service',
-        'angular-resource'
+        'angular-resource',
+        'swiper'
        ],function(require,angular){
-            'use strict';
             require(['domReady!'],function(){
                 angular.bootstrap(document,['webapp']);
             });

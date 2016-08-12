@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <title></title>
+    <script src="js/libs/angular.min.js"></script>
+    <script>
+        var app = angular.module('plunker', []);
+
+        app.controller('MainCtrl', function ($scope) {
+            $scope.name = true;
+        });
+
+        app.directive('myDirective', function ($compile) {
+            return {
+                restrict: 'AE', //attribute or element
+                scope: {
+                    myDirectiveVar: '=',
+                    //bindAttr: '='
+                },
+                template: '<button>' +
+                  'click me</button>',
+                replace: true,
+                //require: 'ngModel',
+                link: function ($scope, elem, attr, ctrl) {
+
+                    elem.bind('click', function () {
+                        $scope.$apply(function () {
+                            $scope.myDirectiveVar = !$scope.myDirectiveVar;
+                        });
+                    });
+
+                    console.debug($scope);
+                    //var textField = $('input', elem).attr('ng-model', 'myDirectiveVar');
+                    // $compile(textField)($scope.$parent);
+                }
+            };
+        });
+    </script>
+</head>
+<body ng-app="plunker" ng-controller="MainCtrl">
+    This scope value <input type="checkbox" ng-model="name">
+    <my-directive my-directive-var="name"></my-directive>
+    <my-directive my-directive-var="name"></my-directive>
+</body>
+</html>

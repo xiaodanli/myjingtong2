@@ -18,13 +18,13 @@
     <div class="weui_cell">
         <p>发表评价</p>
     </div>
-    <div class="well" ng-controller="star1Ctrl">
+    <div class="well">
         <div class="well-txt">服务质量</div>
-        <div star rating-value="ratingVal" max="max" readonly="{{readonly}}"></div>
+        <div star rating-value="ratingVal1" readonly="{{readonly}}"></div>
     </div>
-    <div class="well" ng-controller="star2Ctrl">
+    <div class="well">
         <div class="well-txt">项目质量</div>
-        <div star rating-value="ratingVal" max="max" readonly="{{readonly}}"></div>
+        <div star rating-value="ratingVal2" readonly="{{readonly}}"></div>
     </div>
 </div>
 <p ng-show="depositTxt" class="grey fz14 mg20">您的评价对我们很重要，我们致力为你提供更好服务~</p>
